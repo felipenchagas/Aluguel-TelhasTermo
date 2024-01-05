@@ -10,7 +10,6 @@ RewriteCond %{SCRIPT_FILENAME}.html -f
 RewriteRule [^/]$ %{REQUEST_URI}.html [QSA,L]
 
 <IfModule mod_rewrite.c>
-	RewriteCond %{HTTPS} off [OR]
 	RewriteCond %{HTTP_HOST} ^www\.telhatermo\.com\.br [NC]
 	RewriteRule (.*) https://telhatermo.com.br/$1 [L,R=301]
 </IfModule>
